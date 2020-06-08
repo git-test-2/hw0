@@ -90,3 +90,15 @@ function task3($a, $b){
     }
     else echo 'не корректные данные';
 }
+
+
+
+function textOpen(string $filename)
+{
+    $fp = fopen($filename,'r');
+    $str = '';
+    while (!feof($fp)){
+        $str .= fgets($fp,1024);
+    }
+    echo $str;
+}
